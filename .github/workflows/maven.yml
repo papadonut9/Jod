@@ -20,6 +20,9 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
+    
+    - name: Run spotless check
+      run: mvn spotless:check
 
     - name: Run Maven Tests
       # This command returns a non-zero exit code if any test fails, 
